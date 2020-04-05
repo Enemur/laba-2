@@ -111,13 +111,13 @@ class Figure(BaseFigureActions):
 
         path = QPainterPath()
 
-        path.moveTo(centerX + self._size, centerY + self._size)
-
         cos = math.cos(angel)
         sin = math.sin(angel)
 
-        x = centerX
-        y = centerY
+        x = 0
+        y = self._size
+
+        path.moveTo(centerX + x, centerY + y)
 
         for i in range(pointsAmount):
             newX = x * cos - y * sin
